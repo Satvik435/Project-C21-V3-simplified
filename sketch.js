@@ -24,7 +24,7 @@ function setup() {
 	World.add(world,ball);
 
 	//write the code to make the ground object and the leftSide ground object
-	ground = new ground(width/2,670,width,20)
+	groundObj = new ground(width/2,670,width,20)
 	leftSide = new ground(1100,600,20,120)
 	
 	rightSide = new ground(1350,600,20,120);
@@ -47,7 +47,7 @@ function draw() {
 //write the code to display the ground and leftSide 
   leftSide.display();
   rightSide.display();
-	ground.display();
+	groundObj.display();
   
 }
 
