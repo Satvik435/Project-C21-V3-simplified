@@ -24,7 +24,8 @@ function setup() {
 	World.add(world,ball);
 
 	//write the code to make the ground object and the leftSide ground object
-	
+	ground = new ground(width/2,670,width,20)
+	leftSide = new ground(1100,600,20,120)
 	
 	rightSide = new ground(1350,600,20,120);
 
@@ -39,20 +40,21 @@ function draw() {
 
 
 //write the code to display the ball on the screen
-	
+	ball.display()
 	
 	
 	
 //write the code to display the ground and leftSide 
-  
+  leftSide.display();
   rightSide.display();
+	ground.display();
   
 }
 
 function keyPressed() {
   	if (keyCode === UP_ARROW) {
 
-		//Matter.Body.applyForce(ball,ball.position,{x:85,y:-85});
+		Matter.Body.applyForce(ball,ball.position,{x:85,y:-85});
 		//Matter.applyForce(ball.position,{x:85,y:-85});
 		//Matter.Body.ApplyForce(ball,ballPosition,{x:85,y:-85});
 		//Matter.body.applyForce(ball,ball.position,{x:85,y:-85});
